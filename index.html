@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Modo Cine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div id="app">
+    <section id="buscar" class="active">
+      <header><h1>Buscar</h1></header>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar película..." />
+        <button id="searchBtn">🔍</button>
+      </div>
+      <div id="resultados" class="cards"></div>
+    </section>
+
+    <section id="biblioteca">
+      <header><h1>Biblioteca</h1></header>
+      <div id="libraryList" class="cards"></div>
+    </section>
+
+    <section id="apps">
+      <header><h1>Apps</h1></header>
+      <div id="appsList" class="cards"></div>
+    </section>
+
+    <section id="config">
+      <header><h1>Configuración</h1></header>
+      <ul class="settings">
+        <li>Tema oscuro / claro</li>
+        <li>Idioma</li>
+        <li>Calidad de reproducción</li>
+        <li>Cerrar sesión</li>
+      </ul>
+    </section>
+
+    <div id="playerModal" class="hidden">
+      <video id="player" controls></video>
+      <button id="closePlayer">✕</button>
+    </div>
+
+    <nav class="bottom-nav">
+      <button data-tab="buscar" class="active">🔍<span>Buscar</span></button>
+      <button data-tab="biblioteca">🎬<span>Biblioteca</span></button>
+      <button data-tab="apps">📱<span>Apps</span></button>
+      <button data-tab="config">⚙️<span>Config</span></button>
+    </nav>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
