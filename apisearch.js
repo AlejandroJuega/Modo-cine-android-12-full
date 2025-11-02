@@ -7,4 +7,4 @@ export default async function handler(req,res){
   ];
   const results = dummy.filter(m=>m.title.toLowerCase().includes(q));
   res.status(200).json(results);
-}
+}const key = '3ed6afc36dca3cbe76326252923044e9';
